@@ -1,5 +1,7 @@
 import 'dart:math';
+
 import 'package:flutter/material.dart';
+
 import 'shimmer.dart';
 import 'stylings.dart';
 
@@ -53,7 +55,7 @@ class SkeletonAvatar extends StatelessWidget {
                       style.maxHeight ?? constraints.maxHeight)
                   : style.height,
               decoration: BoxDecoration(
-                color: Theme.of(context).backgroundColor,
+                color: Theme.of(context).scaffoldBackgroundColor,
                 shape: style.shape,
                 borderRadius:
                     style.shape != BoxShape.circle ? style.borderRadius : null,
@@ -97,7 +99,7 @@ class SkeletonLine extends StatelessWidget {
                       : style.width,
                   height: style.height,
                   decoration: BoxDecoration(
-                    color: Theme.of(context).backgroundColor,
+                    color: Theme.of(context).scaffoldBackgroundColor,
                     borderRadius: style.borderRadius,
                   ),
                 );
